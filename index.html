@@ -1,6 +1,6 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#243c4a"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="assets/icon-192.png"><title>ときめきバニメモリアル｜バニソリューションズ編</title><style>
 :root{--ink:#263d49;--teal:#356a72;--cream:#fffaf1;--line:#e5dfd2;--pink:#a84f70}*{box-sizing:border-box}body{margin:0;background:linear-gradient(145deg,#dce9e7,#f9eddf 70%,#f2dce4);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif}button,input,select{font:inherit}button{cursor:pointer}.app{max-width:600px;margin:auto;padding:14px 12px 35px}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.brand{font-weight:900;letter-spacing:.09em;font-size:12px}.tag{font-size:11px;color:#526b70}.panel{background:#fffdf8;border:1px solid #fff;border-radius:19px;padding:16px;box-shadow:0 8px 22px #223e4310;margin-bottom:12px}.hero{padding:0;overflow:hidden}.banner{padding:18px;background:linear-gradient(115deg,#f6ead7,#e5f0ec)}h1{font-size:24px;margin:5px 0}h2{font-size:16px;margin:0 0 10px}.muted{color:#64777c;font-size:12px;line-height:1.65}.photo{height:220px;background:radial-gradient(ellipse,#fffdf6,#e5ece8);display:flex;align-items:center;justify-content:center;position:relative}.photo img{height:100%;width:100%;object-fit:contain;display:none}.photo .placeholder{color:#82969a;text-align:center;font-size:13px;line-height:1.9;padding:20px}.photo .placeholder b{font-size:28px;color:#a87b90}.photoactions{display:flex;gap:8px;align-items:center;padding:10px 14px;border-top:1px solid var(--line)}.small{font-size:11px;padding:8px 10px;background:#f4f5f1;border:1px solid var(--line);border-radius:10px;color:var(--ink)}input[type=file]{display:none}.statgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.stat{font-size:12px}.stathead{display:flex;justify-content:space-between}.track{background:#e8ebe6;border-radius:99px;height:7px;overflow:hidden;margin:5px 0 7px}.fill{height:100%;background:linear-gradient(90deg,#6196a0,#c9a55f)}.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.action{border:1px solid #dcdcd1;background:#fff;border-radius:12px;padding:13px 10px;text-align:left;color:var(--ink);min-height:75px}.action b{display:block;font-size:14px}.action span{display:block;font-size:11px;color:#6e7d80;margin-top:5px}.action:active{background:#e9f3ef}.action:disabled{opacity:.45;cursor:not-allowed}.row{display:flex;gap:8px;flex-wrap:wrap}.primary{border:0;border-radius:11px;padding:12px 15px;background:#305b64;color:white;font-weight:700}.secondary{border:1px solid var(--line);border-radius:11px;padding:11px 12px;background:#f3f2eb;color:var(--ink)}.primary:disabled,.secondary:disabled{opacity:.45}.people{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.person{border:1px solid var(--line);background:#f8f6ef;border-radius:10px;padding:10px 5px;text-align:center;font-size:12px}.person.active{border:2px solid var(--teal);background:#e9f3f0}.person small{display:block;color:#6e7d80;margin-top:5px}.dialogue{font-size:14px;line-height:1.8;white-space:pre-line;min-height:90px}.choice{display:block;width:100%;text-align:left;border:1px solid var(--line);background:white;border-radius:10px;padding:11px;margin-top:8px;color:var(--ink)}.choice:disabled{opacity:.5}.reply{background:#fdf0f5;border-left:4px solid #b96988;border-radius:10px;padding:14px;line-height:1.9;margin:12px 0;white-space:pre-line}.reply small{display:block;color:#915570;font-weight:700}.reply strong{color:#9b456b}.notice{font-size:11px;color:#617479;line-height:1.7}.status{font-size:12px;color:#52736b;min-height:16px}.hidden{display:none!important}#eventPanel{border:2px solid #ddc4aa}#eventTitle{color:#99566a}#endPanel{border:2px solid #c99dba}.divider{border-top:1px solid var(--line);margin:12px 0}select{padding:9px;border:1px solid var(--line);border-radius:9px;background:white;color:var(--ink)}
-</style></head><body><main class="app"><div class="top"><div class="brand">BANI MEMORIES Ver.3.14 <span style="color:#aa7080">♡</span></div><div class="tag" id="date">1年目 4月 第1週</div></div><section class="panel hero"><div class="banner"><div class="tag">BANI SOLUTIONS / 恋愛育成シミュレーション</div><h1>ときめきバニメモリアル</h1><div class="muted">バニソリューションズ編 ─ 新入社員として過ごす60週間</div></div><div class="photo"><img id="portrait" alt="実物のバニの写真"><div id="placeholder" class="placeholder"><b>♡</b><div>ここに実物のバニの写真が入ります。<br>写真を描き直すことはありません。</div></div></div><div class="photoactions"><label for="photoInput" class="small">写真を設定</label><input type="file" accept="image/*" id="photoInput"><button class="small" id="photoRemove">写真を外す</button><span class="muted" id="photoName">バニ平</span></div></section><section class="panel" id="diagnostic" style="background:#fff1d9;border:2px solid #c57d2a"><b>動作確認中…</b><div id="diagnosticText" class="muted">この表示が消えない場合、開いている画面でゲームのプログラムが実行されていません。Safari・Chromeで公開URLを開いてください。</div></section><section class="panel"><h2>社員プロフィール</h2><div class="statgrid" id="stats"></div><div class="divider"></div><div class="row"><span class="muted" id="money"></span><span class="muted" id="week"></span></div></section><section class="panel"><h2>今週の行動を選ぶ</h2><div class="actions" id="actions"></div></section><section class="panel"><h2>バニとの交流</h2><div class="people" id="people"></div><p class="muted">攻略対象を選ぶと、会話・デートの相手と表示写真が切り替わります。今週の行動では、ほかのバニとも交流が生まれます。</p><div class="row"><button class="primary" id="talk">会話する（今週の行動）</button><button class="secondary" id="dateBtn">デート（費用20・体力-5）</button></div><p class="muted" id="dateHint" aria-live="polite"></p></section><section class="panel" id="eventPanel"><h2 id="eventTitle">入社式</h2><div class="dialogue" id="eventText"></div><div id="eventChoices"></div></section><section class="panel hidden" id="endPanel"><h2 id="endingTitle">60週間の結末</h2><div class="dialogue" id="ending"></div><button class="primary" id="newGame">もう一度はじめる</button></section><section class="panel"><h2>セーブ・設定</h2><div class="row"><button class="secondary" id="export">セーブを書き出す</button><label class="small" for="importInput">セーブを読み込む</label><input type="file" id="importInput" accept="application/json,.json"><button class="secondary" id="restart">最初から</button></div><p class="status" id="status" aria-live="polite"></p><p class="notice">Ver.3.14：体力が5以下、またはストレスが20以上になると、週の切り替わりに30％の確率で体調を崩します。研修・手伝い・デートは体力を消費し、休養で回復します。行動後に体力・所持金がマイナスになる行動は選べません。週の開始時に体力が0、またはストレスが30を超えていると自動的に休養し、体力+8・ストレス-12になります。好感度が30を超えるバニだけがお見舞いや電話をしてくれます。60週目に、その時点で一番好感度の高いバニから告白されます。告白された時点でゲームクリアとなります。バニ別の会話と選択肢を追加。同じ言葉でも、バニや場面によって受け取り方が変わります。体力・ストレス・相性・好感度によって、お見舞い・そっけない態度・成長を喜ぶイベントが発生します。選択肢の順序は毎回変わります。好感度が高いと返事も親しくなります。6週ごとに抽選で、運動会・社員旅行・食事会・ライバル会社・入院・昇進面接のイベントが入ります。今週の行動は8体それぞれとの交流があり、返事でその相手の好感度が上下します。休養は一人で過ごす回と、バニと過ごす回があります。自動休養中は好感度20以上のバニが連絡することがあります。デートは相手の好感度35以上で解放されます。4週ごとの声かけは能力に応じた抽選です。芸術は友・麦、優しさは丸・豆、知性は平・彦、魅力は吉・六から声をかけられやすくなります。好感度が高いとお誘いの内容も変化。選択のたびに自動保存。保存は端末・ブラウザごとに独立します。写真は端末ごとに設定できます。端末を変更する際はセーブを書き出してください。旧「バニの放課後」のセーブとは別管理です。</p></section></main><script>
+</style></head><body><main class="app"><div class="top"><div class="brand">BANI MEMORIES Ver.3.15 <span style="color:#aa7080">♡</span></div><div class="tag" id="date">1年目 4月 第1週</div></div><section class="panel hero"><div class="banner"><div class="tag">BANI SOLUTIONS / 恋愛育成シミュレーション</div><h1>ときめきバニメモリアル</h1><div class="muted">バニソリューションズ編 ─ 新入社員として過ごす60週間</div></div><div class="photo"><img id="portrait" alt="実物のバニの写真"><div id="placeholder" class="placeholder"><b>♡</b><div>ここに実物のバニの写真が入ります。<br>写真を描き直すことはありません。</div></div></div><div class="photoactions"><label for="photoInput" class="small">写真を設定</label><input type="file" accept="image/*" id="photoInput"><button class="small" id="photoRemove">写真を外す</button><span class="muted" id="photoName">バニ平</span></div></section><section class="panel" id="diagnostic" style="background:#fff1d9;border:2px solid #c57d2a"><b>動作確認中…</b><div id="diagnosticText" class="muted">この表示が消えない場合、開いている画面でゲームのプログラムが実行されていません。Safari・Chromeで公開URLを開いてください。</div></section><section class="panel"><h2>社員プロフィール</h2><div class="statgrid" id="stats"></div><div class="divider"></div><div class="row"><span class="muted" id="money"></span><span class="muted" id="week"></span></div></section><section class="panel"><h2>今週の行動を選ぶ</h2><div class="actions" id="actions"></div></section><section class="panel"><h2>バニとの交流</h2><div class="people" id="people"></div><p class="muted">攻略対象を選ぶと、会話・デートの相手と表示写真が切り替わります。今週の行動では、ほかのバニとも交流が生まれます。</p><div class="row"><button class="primary" id="talk">会話する（今週の行動）</button><button class="secondary" id="dateBtn">デート（費用20・体力-5）</button></div><p class="muted" id="dateHint" aria-live="polite"></p></section><section class="panel" id="eventPanel"><h2 id="eventTitle">入社式</h2><div class="dialogue" id="eventText"></div><div id="eventChoices"></div></section><section class="panel hidden" id="endPanel"><h2 id="endingTitle">60週間の結末</h2><div class="dialogue" id="ending"></div><button class="primary" id="newGame">もう一度はじめる</button></section><section class="panel"><h2>セーブ・設定</h2><div class="row"><button class="secondary" id="export">セーブを書き出す</button><label class="small" for="importInput">セーブを読み込む</label><input type="file" id="importInput" accept="application/json,.json"><button class="secondary" id="restart">最初から</button></div><p class="status" id="status" aria-live="polite"></p><p class="notice">Ver.3.15：体力が5以下、またはストレスが20以上になると、週の切り替わりに30％の確率で体調を崩します。研修・手伝い・デートは体力を消費し、休養で回復します。行動後に体力・所持金がマイナスになる行動は選べません。週の開始時に体力が0、またはストレスが30を超えていると自動的に休養し、体力+8・ストレス-12になります。好感度が30を超えるバニだけがお見舞いや電話をしてくれます。60週目に、その時点で一番好感度の高いバニから告白されます。告白された時点でゲームクリアとなります。バニ別の会話と選択肢を追加。同じ言葉でも、バニや場面によって受け取り方が変わります。体力・ストレス・相性・好感度によって、お見舞い・そっけない態度・成長を喜ぶイベントが発生します。選択肢の順序は毎回変わります。好感度が高いと返事も親しくなります。バニは過去の選択を覚えて返答し、告白では一緒に体験した思い出を振り返ります。6週ごとに抽選で、運動会・社員旅行・食事会・ライバル会社・入院・昇進面接のイベントが入ります。今週の行動は8体それぞれとの交流があり、返事でその相手の好感度が上下します。休養は一人で過ごす回と、バニと過ごす回があります。自動休養中は好感度20以上のバニが連絡することがあります。デートは相手の好感度35以上で解放されます。4週ごとの声かけは能力に応じた抽選です。芸術は友・麦、優しさは丸・豆、知性は平・彦、魅力は吉・六から声をかけられやすくなります。好感度が高いとお誘いの内容も変化。選択のたびに自動保存。保存は端末・ブラウザごとに独立します。写真は端末ごとに設定できます。端末を変更する際はセーブを書き出してください。旧「バニの放課後」のセーブとは別管理です。</p></section></main><script>
 window.addEventListener("error",function(e){var el=document.getElementById("diagnostic");if(el){el.style.display="block";el.innerText="ゲーム実行エラー: "+e.message+"（行 "+e.lineno+"）";}});
 (()=>{'use strict';const $=id=>document.getElementById(id);const KEY='baniSolutionsSaveV1';const PEOPLE=[{id:'hei',name:'バニ平',job:'社長',likes:'intellect',place:'お好み焼き屋',voice:'「経営って難しいよね。……あ、資料を忘れた」',date:'「ふたりでお好み焼き、食べに行こうか」'},{id:'hiko',name:'バニ彦',job:'林業・現場',likes:'stamina',place:'森林公園',voice:'「今日の現場も、きっちり終わらせよう」',date:'「森を歩くと気分がいいな」'},{id:'yoshi',name:'バニ吉',job:'倉庫・保険',likes:'kindness',place:'倉庫街の喫茶店',voice:'「焦らなくて大丈夫。ゆっくりやろう」',date:'「こういう静かな時間、好きだな」'},{id:'maru',name:'バニ丸',job:'音響・ラジオ',likes:'art',place:'レコード店',voice:'「この音、いいと思わない？」',date:'「一緒に選曲してみようよ」'},{id:'tomo',name:'バニ友',job:'ダンス',likes:'charm',place:'ダンススタジオ',voice:'「ほら、音に合わせて動いてみて！」',date:'「今日は一緒に踊ろう！」'},{id:'roku',name:'バニ六',job:'農業',likes:'stamina',place:'農園',voice:'「小松菜、今日はよく育ってるよ」',date:'「畑の風って気持ちいいね」'},{id:'mame',name:'バニ豆',job:'製鉄',likes:'intellect',place:'工房',voice:'「この金属の曲がり方、面白いんだ」',date:'「工房の新作、見てくれる？」'},{id:'mugi',name:'バニ麦',job:'詩作',likes:'art',place:'川沿いの散歩道',voice:'「言葉は、少しずつ育つんだね」',date:'「今日の景色を詩にしてみようか」'}];const REPLIES={hei:['君の話を聞いていたら、少し考えがまとまったよ。……あれ、肝心の資料はどこだっけ？','そういう見方もあるんだね。社長の僕も勉強になるな。','ふふ、君と話していると肩の力が抜けるよ。'],hiko:['現場のことをちゃんと聞いてくれるんだな。うれしいよ。','君も頑張ってるな。僕も負けていられない。','挨拶は基本だ。明日もよろしくな。'],yoshi:['そんなふうに気にかけてもらえると、ほっとするよ。','君の話も聞けてよかった。無理しないでね。','うん、またゆっくり話そうね。'],maru:['そこに気づくとは！ 次は一緒に音を聴き比べよう。','君の話、ラジオで紹介したくなるな。','今度いいレコードを持ってくるよ。'],tomo:['いいね！ その調子で一緒にやってみよう！','へえ、面白い！ 今度踊りで表現してみようかな。','また一緒に踊ろうね！'],roku:['畑の話を聞いてくれるの、うれしいな。小松菜も喜ぶよ。','そうなんだ。今度は君も畑に来てみて。','また収穫のときに会おうね。'],mame:['その質問、いいね。鉄って奥が深いんだ。','その発想はなかった。試してみたいな。','今度できた作品を見せるよ。'],mugi:['耳を傾けてくれる人がいると、言葉が育つね。','君の話から、新しい詩が生まれそう。','今日の一言、詩に残しておこうかな。']};const APPROACHES={hei:['ちょっと相談があるんだ。新しい企画の話、聞いてくれる？','今度、お好み焼きを食べながら話さない？'],hiko:['現場の帰りなんだ。少し一緒に歩かないか？','次の休日、森の様子を見に行かないか？'],yoshi:['今日は忙しかったね。少しお茶でもどう？','気になってた喫茶店があるんだ。一緒に行く？'],maru:['新しい音源を見つけたんだ。聴いてみない？','今度レコード店に行こうよ。'],tomo:['ねえ、ちょっと踊ってみない？','休みの日、一緒にダンスを見に行かない？'],roku:['小松菜がいい感じなんだ。畑を見ていかない？','今度、収穫を手伝ってくれる？'],mame:['磨いた鉄の作品ができたんだ。見てくれる？','今度、工房に遊びに来ない？'],mugi:['新しい詩ができたんだ。聞いてくれる？','川沿いを歩きながら、少し話さない？']};// Dialogue additions for bani-solutions/bani-game.
 const CONVERSATIONS={
@@ -182,7 +182,136 @@ function conversationScene(p){
  const row=list[scene];
  return {scene,text:`${p.job}の仕事場で${p.name}に会った。\n${p.name}「${row[0]}」`,choices:shuffledChoices(row.slice(1).map(([text,a,replies])=>({text,a,replies:replies.split('|')})))};
 }
+const BANI_MEMORY_VERSION=1;
+const MEMORY_FACTS={
+ hospitalVisit:{priority:100,line:'入院したとき、都合を合わせてお見舞いに来てくれたバニ。あのときは安心したバニ。'},
+ hospitalPhone:{priority:98,line:'入院したとき、電話で仕事の心配をしなくていいと言ってくれたバニ。あの言葉を覚えているバニ。'},
+ hospitalLetter:{priority:96,line:'入院したとき、返事はいらないとお便りを送ってくれたバニ。気遣いがうれしかったバニ。'},
+ tripTogether:{priority:90,line:'社員旅行で、一緒に景色を見て回ったバニ。君と話しながら歩いた時間を覚えているバニ。'},
+ dateTogether:{priority:85,line:'一緒に出かけたとき、また君と過ごしたいと思ったバニ。あの時間も大切な思い出バニ。'},
+ sportsTogether:{priority:80,line:'運動会で同じチームになって、一緒に競技に参加したバニ。君と息を合わせた時間を覚えているバニ。'},
+ sportsSupport:{priority:78,line:'運動会で応援と準備を引き受けてくれたバニ。支えてくれる君がうれしかったバニ。'},
+ rivalTogether:{priority:75,line:'ライバル会社への対応を考えたとき、部署を越えて意見を集めてくれたバニ。君と協力できて心強かったバニ。'},
+ dinnerTogether:{priority:70,line:'食事会で一緒に近況を話したバニ。仕事を離れて君のことを知れたのがうれしかったバニ。'},
+ respectedFinish:{priority:65,line:'仕事を代わるだけでなく、自分で仕上げたい気持ちを尊重してくれたバニ。わかってくれたことを覚えているバニ。'},
+ trustedFinish:{priority:55,line:'仕事を任せて、終わるまで待ってくれたバニ。信じてもらえてうれしかったバニ。'},
+ sharedImpression:{priority:50,line:'創作の時間に、君に浮かんだイメージを聞かせてくれたバニ。君の感じ方をもっと知りたいと思ったバニ。'},
+ listenedWork:{priority:45,line:'仕事で考えた理由を、もう少し聞かせてと言ってくれたバニ。耳を傾けてくれるのがうれしかったバニ。'},
+ quietRest:{priority:40,line:'静かに一緒に休んだバニ。何も話さない時間も、君となら落ち着けたバニ。'},
+ calledPlayer:{priority:35,line:'君が体調を崩したとき、電話で声を聞いた日のことも覚えているバニ。'},
+ visitedPlayer:{priority:35,line:'君が体調を崩したとき、お見舞いに行った日のことも覚えているバニ。'}
+};
+function memoryBook(id){
+ if(!s.baniMemories||typeof s.baniMemories!=='object'||Array.isArray(s.baniMemories))s.baniMemories={};
+ if(!s.baniMemories[id]||typeof s.baniMemories[id]!=='object')s.baniMemories[id]={};
+ const book=s.baniMemories[id];
+ if(!book.moments||typeof book.moments!=='object'||Array.isArray(book.moments))book.moments={};
+ if(!Array.isArray(book.choices))book.choices=[];
+ if(!book.recalled||typeof book.recalled!=='object'||Array.isArray(book.recalled))book.recalled={};
+ return book;
+}
+function putMemory(id,key,week){
+ if(!PEOPLE.some(p=>p.id===id)||!MEMORY_FACTS[key])return;
+ const book=memoryBook(id);
+ if(!book.moments[key])book.moments[key]={key,week};
+}
+function learnInteraction(e,c,week=s.week,from=e.from){
+ if(e.kind==='illness'){
+  for(const contact of e.contacts||[])if(contact.type==='visit'||contact.type==='phone')putMemory(contact.id,contact.type==='visit'?'visitedPlayer':'calledPlayer',week);
+  return;
+ }
+ if(!PEOPLE.some(p=>p.id===from))return;
+ const book=memoryBook(from),text=c.text||'';
+ // Only a known negative response establishes that taking over was unwanted.
+ if(text==='この仕事、私がやっておくよ！'&&c.a<0)book.declinedTakeover={week};
+ if(text==='任せるね。終わったら声をかけて'&&c.a>0){
+  putMemory(from,book.declinedTakeover&&book.declinedTakeover.week<week?'respectedFinish':'trustedFinish',week);
+ }
+ let fact;
+ if(e.kind==='company'){
+  if(e.companyType==='hospital'){
+   if(text==='都合を確認してお見舞いへ行く（費用5・体力2）')fact='hospitalVisit';
+   else if(text==='短い電話で、仕事のことは心配しなくていいと伝える')fact='hospitalPhone';
+   else if(text==='静かに休めるよう、返事不要のお便りを送る')fact='hospitalLetter';
+  }else if(e.companyType==='trip'&&text==='一緒に景色を見て回る（費用12・体力2）')fact='tripTogether';
+  else if(e.companyType==='sports'&&text==='同じチームで競技に参加する（体力4）')fact='sportsTogether';
+  else if(e.companyType==='sports'&&text==='応援と道具の準備を引き受ける')fact='sportsSupport';
+  else if(e.companyType==='rival'&&text==='部署を越えて意見を集め、提案を練る（体力3）')fact='rivalTogether';
+  else if(e.companyType==='dinner'&&text==='一緒に食事しながら近況を話す（費用8）')fact='dinnerTogether';
+ }else if(e.kind==='date'&&c.a>0)fact='dateTogether';
+ else if(e.activity==='music'&&text==='私に浮かんだイメージも伝えていい？'&&c.a>0)fact='sharedImpression';
+ else if(e.activity==='rest'&&text==='静かに一緒に過ごしたい'&&c.a>0)fact='quietRest';
+ else if(text==='考えた理由を、もう少し聞かせて'&&c.a>0)fact='listenedWork';
+ if(fact)putMemory(from,fact,week);
+ // Only verified joint company activities apply to the second participant too.
+ if(['tripTogether','sportsTogether','sportsSupport','rivalTogether','dinnerTogether'].includes(fact)){
+  for(const [id,score] of Object.entries(c.otherAff||{}))if(score>0)putMemory(id,fact,week);
+ }
+ if(Number.isFinite(c.a)){
+  book.choices.push({week,kind:e.kind,activity:e.activity,scene:e.scene,text,score:c.a});
+  if(book.choices.length>48)book.choices.shift();
+ }
+}
+function hydrateBaniMemories(){
+ if(s.baniMemoryVersion===BANI_MEMORY_VERSION)return false;
+ for(const h of Array.isArray(s.history)?s.history:[]){
+  if(!Number.isInteger(h.week)||typeof h.choice!=='string')continue;
+  const kind=h.kind||(typeof h.event==='string'&&h.event.includes('とデート')?'date':undefined);
+  let score=h.affDelta;
+  const p=PEOPLE.find(p=>p.id===h.target);
+  if(!Number.isFinite(score)&&kind==='date'&&p){
+   const positive=['相手の好きな話題を選ぶ','素直に楽しさを伝える',...DATE_CHOICES[p.id].slice(0,2).map(c=>c[0])];
+   if(positive.includes(h.choice))score=1;
+  }
+  learnInteraction({kind,companyType:h.companyType,activity:h.activity,scene:h.scene,from:h.target},{text:h.choice,a:score,otherAff:h.otherAff},h.week,h.target);
+ }
+ s.baniMemoryVersion=BANI_MEMORY_VERSION;
+ return true;
+}
+function rememberedReply(p,e,c){
+ if(e.kind==='illness'||!Number.isFinite(c.a)||c.a<=0)return '';
+ const book=memoryBook(p.id);
+ let key,line;
+ if(c.text==='任せるね。終わったら声をかけて'&&book.declinedTakeover?.week<s.week){
+  key='understoodTakeover';line='前に仕事を代わろうとしてくれたときは、自分で仕上げたかったバニ。今回は待ってくれたバニね。覚えていてくれてうれしいバニ。';
+ }else{
+  const hospital=['hospitalVisit','hospitalPhone','hospitalLetter'].find(k=>book.moments[k]&&book.moments[k].week<s.week&&!book.recalled[k]);
+  if(hospital){key=hospital;line=MEMORY_FACTS[hospital].line;}
+  else if(e.kind==='date'&&book.moments.dateTogether?.week<s.week){key='anotherDate';line='前に一緒に出かけた時間も、覚えているバニ。また君と過ごせてうれしいバニ。';}
+  else{
+   const previous=book.choices.slice().reverse().find(h=>h.week<s.week&&h.text===c.text&&h.score>0);
+   if(previous){key='same:'+c.text;line=`前にも「${c.text}」と言ってくれたバニね。あのときもうれしかったバニ。`;}
+  }
+ }
+ if(!key||book.recalled[key])return '';
+ book.recalled[key]=s.week;
+ return line;
+}
 function conversationReply(p,e,c,i){
+ const answer=conversationReplyBase(p,e,c,i);
+ const recall=rememberedReply(p,e,c);
+ if(!recall)return answer;
+ const suffix=`\n\n${p.name}「${recall}」`;
+ return typeof answer==='object'?{...answer,text:answer.text+suffix}:answer+suffix;
+}
+function confessionRecollections(p){
+ return Object.values(memoryBook(p.id).moments).filter(m=>m&&MEMORY_FACTS[m.key]&&Number.isInteger(m.week)&&m.week<=s.week).sort((a,b)=>MEMORY_FACTS[b.key].priority-MEMORY_FACTS[a.key].priority||a.week-b.week).slice(0,3).map(m=>({key:m.key,week:m.week,line:MEMORY_FACTS[m.key].line}));
+}
+function enrichConfession(c,p){
+ const recollections=confessionRecollections(p);
+ c.recollections=recollections;c.memoryVersion=BANI_MEMORY_VERSION;
+ c.line=(recollections.length?recollections.map(m=>m.line).join('\n')+'\n\n':'')+CONFESSION_LINES[p.id];
+}
+function prepareBaniMemories(){
+ let changed=hydrateBaniMemories();
+ if(s.clearReason==='confession60'&&s.confession60&&s.confession60.memoryVersion!==BANI_MEMORY_VERSION){
+  const p=PEOPLE.find(p=>p.id===s.confession60.from);
+  if(p){enrichConfession(s.confession60,p);changed=true;}
+ }
+ return changed;
+}
+
+function conversationReplyBase(p,e,c,i){
  if(e.kind==='illness')return {text:c.healthReply,variant:0};
  if(!c.replies){let legacy=replyForLegacy(p,e,c,i);const speech=line=>'「'+line.replace(/[。！？?！]$/,'')+'バニ」';return legacy.includes('「')?legacy.replace(/「([^」]+)」/g,(_,line)=>speech(line)):legacy.replace(/^([\s\S]*?)(?=\\n\\n|\n\n|$)/,(_,line)=>speech(line));}
  const last=(s.history||[]).slice().reverse().find(h=>h.target===p.id&&h.choice===c.text&&Number.isInteger(h.replyVariant));
@@ -276,7 +405,7 @@ function confessionEvent(){
  const ranked=PEOPLE.slice().sort((a,b)=>s.aff[b.id]-s.aff[a.id]||Number(b.id===s.target)-Number(a.id===s.target)||s.dates[b.id]-s.dates[a.id]);
  const p=ranked[0];
  s.confession60={from:p.id,week:60,affection:s.aff[p.id],dates:s.dates[p.id],line:CONFESSION_LINES[p.id],status:'cleared'};
- s.target=p.id;s.clearReason='confession60';s.ended=true;s.pending=null;
+ enrichConfession(s.confession60,p);s.target=p.id;s.clearReason='confession60';s.ended=true;s.pending=null;
  return true;
 }
 // Game rule: stamina <= 5 OR stress >= 20; roll once per week.
@@ -487,13 +616,13 @@ function takeAction(a){if(s.pending||s.ended)return;if(enforceRest())return;cons
  s.pending=approach||weeklyActionEvent(a);
  if(!approach&&a.id!=='rest'&&s.week%8===7)s.pending.title='社内の季節イベント：'+PEOPLE.find(p=>p.id===s.pending.from).name;
  safeSave();render()}function talk(){if(s.pending||s.ended)return;if(enforceRest())return;const p=person();s.met[p.id]++;const scene=conversationScene(p);s.pending={...scene,kind:'talk',from:p.id,title:`${p.name}と話す`,text:scene.text,choices:scene.choices};safeSave();render()}function date(){if(s.pending||s.ended)return;const p=person();if(s.aff[p.id]<35)return msg(`${p.name}をデートに誘うには好感度35以上が必要です`);if(enforceRest())return;const shortage=resourceShortage(DATE_COST);if(shortage)return msg(shortage);adjust(DATE_COST);s.dates[p.id]++;const success=s.stats[p.likes]>=30&&s.aff[p.id]>=25;s.pending={kind:'date',from:p.id,title:`${p.name}とデート`,text:`行き先は「${p.place}」。\n${p.name}「今日は一緒に${p.place}で過ごすバニ」\n${success?'話が弾み、楽しい時間になりそう。':'まだ少し緊張しているみたい。'}`,choices:shuffledChoices(DATE_CHOICES[p.id].map(([text,replies],i)=>({text,a:i===0?(success?12:5):i===1?(success?9:6):-4,replies:replies.split('|')})))};safeSave();render()}function replyForLegacy(p,e,c,i){if(e.kind==='approach'){let lines=i===0?['本当？ うれしいな！ 君に声をかけてよかった。','ありがとう！ 君と話せるの、楽しみにしてたんだ。']:i===1?['少しでも話せてよかった。また誘うね。','忙しいのにありがとう。無理しないでね。']:['そっか、残念。また今度にするね。','わかった。仕事、頑張ってね。'];return `「${lines[(s.week+PEOPLE.findIndex(x=>x.id===p.id))%lines.length]}」\n\n${c.a>0?'♡ '+p.name+'はうれしそうだ。':p.name+'は少し残念そうだ。'}  好感度 ${c.a>=0?'+':''}${c.a}`}let base=(REPLIES[p.id]||REPLIES.hei)[Math.min(i,2)];let kind=e.title.includes('デート')?'date':e.title.includes('話す')?'talk':e.title.includes('季節')?'season':'work';if(kind==='date'){let lines=[`「${c.text}って言ってくれるんだね。今日は来てよかった。また一緒に出かけたいな」`,`「そう言ってもらえると、うれしいよ。今日のこと、覚えておくね」`,`「うん、そういう話もいいね。次はもっといろいろ話そう」`];base=lines[Math.min(i,2)]}else if(kind==='work'){base=i===0?'「今週もお疲れさま。来週はどんな一週間になるかな？」':base}else if(kind==='season'){base=i===0?'「ちゃんと聞いてくれるんだね。ありがとう」':i===1?'「君の近況も知れてよかったよ」':'「あはは、そう来るとは思わなかった！」'}let reaction=c.a>=9?'♡ とても喜んでいる！':c.a>=4?'♡ うれしそうだ。':c.a>0?'少し打ち解けたみたい。':'次の週へ進もう。';return `${base}\n\n${reaction}  好感度 +${c.a}`}
-function showEvent(){let e=s.pending;$('eventTitle').textContent=e.title;$('eventChoices').innerHTML='';if(e.kind==='forcedRest'||e.kind==='soloRest'){$('eventText').textContent=e.text;const b=document.createElement('button');b.className='primary';b.textContent='休養を終えて次の週へ ›';b.onclick=()=>{if(e.kind==='soloRest'){s.history.push({week:s.week,target:null,event:e.title,choice:'一人で休む',kind:'soloRest'});if(s.history.length>100)s.history.shift()}s.pending=null;nextWeek();msg('休養の結果を保存しました')};$('eventChoices').append(b);return}if(e.reply){$('eventText').textContent=e.text;let box=document.createElement('div');box.className='reply';let who=document.createElement('small');who.textContent=e.kind==='illness'?'療養の記録':e.replyName+' の返事';let body=document.createElement('div');body.textContent=e.reply;box.append(who,body);$('eventChoices').append(box);let b=document.createElement('button');b.className='primary';b.textContent=e.advanceWeek===false?'今週の行動へ戻る ›':'次の週へ ›';b.onclick=()=>{s.pending=null;if(e.advanceWeek===false){if(!enforceRest()){safeSave();render()}}else nextWeek();msg('自動保存しました')};$('eventChoices').append(b);return}$('eventText').textContent=e.text;e.choices.forEach((c,i)=>{let b=document.createElement('button');b.className='choice';const shortage=resourceShortage(c.delta||{});b.disabled=!!shortage;b.title=shortage;b.textContent='› '+c.text+(shortage?' — '+shortage:'');b.onclick=()=>{const shortage=resourceShortage(c.delta||{});if(shortage){msg(shortage);return}let p=PEOPLE.find(x=>x.id===e.from)||person();if(e.kind!=='illness')s.aff[p.id]=clamp(s.aff[p.id]+c.a);if(c.delta)adjust(c.delta);if(c.otherAff)for(const [id,amount] of Object.entries(c.otherAff)){if(id!==p.id&&PEOPLE.some(x=>x.id===id))s.aff[id]=clamp(s.aff[id]+amount)}if(e.kind==='company'&&c.promotionResult)s.promotion={week:s.week,status:c.promotionResult};if(e.kind==='illness'&&s.illness?.week===s.week)s.illness.status='recovered';const answer=conversationReply(p,e,c,i);s.history.push({week:s.week,target:e.kind==='illness'?null:p.id,event:e.title,choice:c.text,kind:e.kind,companyType:e.companyType,parameterMode:e.parameterMode,scene:e.scene,replyVariant:typeof answer==='object'?answer.variant:undefined});if(s.history.length>100)s.history.shift();s.pending={...e,reply:typeof answer==='object'?answer.text:answer,replyName:e.kind==='illness'?'あなた':p.name,choices:[]};safeSave();render();msg(e.kind==='illness'?'体を休めました':`${p.name}の返事が届いたよ`)};$('eventChoices').append(b)})}
+function showEvent(){let e=s.pending;$('eventTitle').textContent=e.title;$('eventChoices').innerHTML='';if(e.kind==='forcedRest'||e.kind==='soloRest'){$('eventText').textContent=e.text;const b=document.createElement('button');b.className='primary';b.textContent='休養を終えて次の週へ ›';b.onclick=()=>{if(e.kind==='soloRest'){s.history.push({week:s.week,target:null,event:e.title,choice:'一人で休む',kind:'soloRest'});if(s.history.length>100)s.history.shift()}s.pending=null;nextWeek();msg('休養の結果を保存しました')};$('eventChoices').append(b);return}if(e.reply){$('eventText').textContent=e.text;let box=document.createElement('div');box.className='reply';let who=document.createElement('small');who.textContent=e.kind==='illness'?'療養の記録':e.replyName+' の返事';let body=document.createElement('div');body.textContent=e.reply;box.append(who,body);$('eventChoices').append(box);let b=document.createElement('button');b.className='primary';b.textContent=e.advanceWeek===false?'今週の行動へ戻る ›':'次の週へ ›';b.onclick=()=>{s.pending=null;if(e.advanceWeek===false){if(!enforceRest()){safeSave();render()}}else nextWeek();msg('自動保存しました')};$('eventChoices').append(b);return}$('eventText').textContent=e.text;e.choices.forEach((c,i)=>{let b=document.createElement('button');b.className='choice';const shortage=resourceShortage(c.delta||{});b.disabled=!!shortage;b.title=shortage;b.textContent='› '+c.text+(shortage?' — '+shortage:'');b.onclick=()=>{const shortage=resourceShortage(c.delta||{});if(shortage){msg(shortage);return}let p=PEOPLE.find(x=>x.id===e.from)||person();if(e.kind!=='illness')s.aff[p.id]=clamp(s.aff[p.id]+c.a);if(c.delta)adjust(c.delta);if(c.otherAff)for(const [id,amount] of Object.entries(c.otherAff)){if(id!==p.id&&PEOPLE.some(x=>x.id===id))s.aff[id]=clamp(s.aff[id]+amount)}if(e.kind==='company'&&c.promotionResult)s.promotion={week:s.week,status:c.promotionResult};if(e.kind==='illness'&&s.illness?.week===s.week)s.illness.status='recovered';const answer=conversationReply(p,e,c,i);learnInteraction(e,c,s.week,p.id);s.history.push({week:s.week,target:e.kind==='illness'?null:p.id,event:e.title,choice:c.text,kind:e.kind,companyType:e.companyType,parameterMode:e.parameterMode,activity:e.activity,affDelta:c.a,otherAff:c.otherAff,scene:e.scene,replyVariant:typeof answer==='object'?answer.variant:undefined});if(s.history.length>100)s.history.shift();s.pending={...e,reply:typeof answer==='object'?answer.text:answer,replyName:e.kind==='illness'?'あなた':p.name,choices:[]};safeSave();render();msg(e.kind==='illness'?'体を休めました':`${p.name}の返事が届いたよ`)};$('eventChoices').append(b)})}
 function showEnding(){if(s.clearReason==='confession60'&&s.confession60){const c=s.confession60,p=PEOPLE.find(p=>p.id===c.from)||person();$('ending').textContent=`♡ ${p.name}からの告白\n\n仕事を終えた帰り道、${p.name}があなたを呼び止めた。\n\n${p.name}「${c.line||CONFESSION_LINES[p.id]}」\n\nGAME CLEAR！\n${p.name}との恋が実った。\n\n到達：60週 / 好感度：${c.affection} / デート回数：${c.dates}`;return}const sorted=PEOPLE.map(p=>({...p,aff:s.aff[p.id],dates:s.dates[p.id]})).sort((a,b)=>b.aff-a.aff);let p=sorted[0];let result=p.aff>=75&&p.dates>=3?`♡ ${p.name}からの告白\n「3年間、一緒にいてくれてありがとう。これからも、そばにいてくれる？」\n\n${p.name}との恋愛エンディング！`:p.aff>=50?`${p.name}との友情エンディング\n会社で出会った大切な仲間。次の3年間も、きっと楽しい。`:'バニソリューションズでの3年間を終えた。\n恋愛はこれから。でも、たくさんの経験を積んだ。';$('ending').textContent=result+`\n\n最高好感度：${p.aff} / デート回数：${p.dates}`}function reset(){if(!confirm('現在のゲームデータを消して最初から始めますか？'))return;s=initial();safeSave();render();msg('新しいゲームを開始しました')}function validStats(x){
  const keys=['intellect','stamina','art','kindness','charm','stress','money'];
  return !!x&&keys.every(k=>
   Number.isFinite(x[k])&&x[k]>=0&&(k==='money'||x[k]<=100)
  );
 }
-function valid(z){return z&&z.version===1&&Number.isInteger(z.week)&&z.week>=0&&z.week<=156&&validStats(z.stats)&&PEOPLE.every(p=>Number.isFinite(z.aff?.[p.id])&&Number.isFinite(z.dates?.[p.id]))&&PEOPLE.some(p=>p.id===z.target)&&typeof z.ended==='boolean'&&(!z.pending||Array.isArray(z.pending.choices))}function download(name,data,type){const url=URL.createObjectURL(new Blob([data],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}$('talk').onclick=talk;$('dateBtn').onclick=date;$('restart').onclick=reset;$('newGame').onclick=reset;$('export').onclick=()=>download('bani-solutions-save.json',JSON.stringify(s,null,2),'application/json');$('importInput').onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let z=JSON.parse(await f.text());if(!valid(z))throw Error();if(!confirm('現在のセーブデータを上書きしますか？'))return;s=z;confessionEvent();enforceRest();safeSave();render();msg('セーブを読み込みました')}catch(err){msg('セーブ形式を確認できませんでした')}finally{e.target.value=''}};$('photoInput').onchange=e=>{let f=e.target.files[0];if(!f)return;if(!f.type.startsWith('image/'))return msg('画像ファイルを選んでください');const r=new FileReader();r.onload=()=>{try{localStorage.setItem('baniPortrait_'+s.target,r.result);imageUrls[s.target]=r.result;setPhoto();msg('写真を保存しました（大きい画像は保存できない場合があります）')}catch(err){imageUrls[s.target]=r.result;setPhoto();msg('写真は表示できましたが保存容量が足りません')}};r.readAsDataURL(f);e.target.value=''};$('photoRemove').onclick=()=>{localStorage.removeItem('baniPortrait_'+s.target);delete imageUrls[s.target];setPhoto();msg('このバニの端末内写真を外しました')};try{let saved=JSON.parse(localStorage.getItem(KEY)||'null');if(valid(saved))s=saved;PEOPLE.forEach(p=>{let v=localStorage.getItem('baniPortrait_'+p.id);if(v)imageUrls[p.id]=v})}catch(e){}if(confessionEvent())safeSave();enforceRest();render();$('diagnostic').style.display='none';if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
+function valid(z){return z&&z.version===1&&Number.isInteger(z.week)&&z.week>=0&&z.week<=156&&validStats(z.stats)&&PEOPLE.every(p=>Number.isFinite(z.aff?.[p.id])&&Number.isFinite(z.dates?.[p.id]))&&PEOPLE.some(p=>p.id===z.target)&&typeof z.ended==='boolean'&&(!z.pending||Array.isArray(z.pending.choices))}function download(name,data,type){const url=URL.createObjectURL(new Blob([data],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}$('talk').onclick=talk;$('dateBtn').onclick=date;$('restart').onclick=reset;$('newGame').onclick=reset;$('export').onclick=()=>download('bani-solutions-save.json',JSON.stringify(s,null,2),'application/json');$('importInput').onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let z=JSON.parse(await f.text());if(!valid(z))throw Error();if(!confirm('現在のセーブデータを上書きしますか？'))return;s=z;prepareBaniMemories();confessionEvent();enforceRest();safeSave();render();msg('セーブを読み込みました')}catch(err){msg('セーブ形式を確認できませんでした')}finally{e.target.value=''}};$('photoInput').onchange=e=>{let f=e.target.files[0];if(!f)return;if(!f.type.startsWith('image/'))return msg('画像ファイルを選んでください');const r=new FileReader();r.onload=()=>{try{localStorage.setItem('baniPortrait_'+s.target,r.result);imageUrls[s.target]=r.result;setPhoto();msg('写真を保存しました（大きい画像は保存できない場合があります）')}catch(err){imageUrls[s.target]=r.result;setPhoto();msg('写真は表示できましたが保存容量が足りません')}};r.readAsDataURL(f);e.target.value=''};$('photoRemove').onclick=()=>{localStorage.removeItem('baniPortrait_'+s.target);delete imageUrls[s.target];setPhoto();msg('このバニの端末内写真を外しました')};try{let saved=JSON.parse(localStorage.getItem(KEY)||'null');if(valid(saved))s=saved;PEOPLE.forEach(p=>{let v=localStorage.getItem('baniPortrait_'+p.id);if(v)imageUrls[p.id]=v})}catch(e){}if(prepareBaniMemories())safeSave();if(confessionEvent())safeSave();enforceRest();render();$('diagnostic').style.display='none';if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
 })();</script></body></html>
 
